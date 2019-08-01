@@ -387,6 +387,11 @@
             return (LogicBuildingClassData) LogicDataTables.m_tables[(int) LogicDataType.BUILDING_CLASS].GetDataByName(name, data);
         }
 
+        public static LogicAllianceBadgeLayerData GetAllianceBadgeLayerByName(string name, LogicData data)
+        {
+            return (LogicAllianceBadgeLayerData) LogicDataTables.m_tables[(int) LogicDataType.ALLIANCE_BADGE_LAYER].GetDataByName(name, data);
+        }
+
         public static LogicClientGlobals GetClientGlobals()
         {
             return (LogicClientGlobals) LogicDataTables.m_tables[(int) LogicDataType.CLIENT_GLOBAL];
