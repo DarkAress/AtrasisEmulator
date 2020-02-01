@@ -21,6 +21,10 @@
         private string m_faqUrl;
         private string m_forumsUrl;
         private string m_privacyPolicyUrl;
+        private string m_feedbackCategoryBanned;
+
+        private int m_appRateXpLevel;
+        private int m_comeBackNotificationDelayHoursSmall;
 
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
@@ -50,6 +54,9 @@
             this.m_faqUrl = this.GetStrValue("FAQ_URL");
             this.m_forumsUrl = this.GetStrValue("FORUMS_URL");
             this.m_privacyPolicyUrl = this.GetStrValue("PRIVACY_POLICY_URL");
+            this.m_feedbackCategoryBanned = this.GetStrValue("FEEDBACK_CATEGORY_BANNED");
+            this.m_appRateXpLevel = this.GetIntValue("APP_RATE_XP_LEVEL");
+            this.m_comeBackNotificationDelayHoursSmall = * 3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
 
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
@@ -158,6 +165,21 @@
         public string PrivacyPolicyUrl()
         {
             return this.m_privacyPolicyUrl;
+        }
+
+        public string FeedbackCategoryBanned()
+        {
+            return this.m_feedbackCategoryBanned;
+        }
+
+        public int AppRateXpLevel()
+        {
+            return this.m_appRateXpLevel;
+        }
+
+        public int ComeBackNotificationDelayHoursSmall()
+        {
+             return this.m_comeBackNotificationDelayHoursSmall;
         }
 
         public bool PepperEnabled()
