@@ -27,6 +27,7 @@ namespace Supercell.Magic.Logic.Data
         private bool m_requiresBuilder;
         private bool m_hasInfoScreen;
         private bool m_housesUnits;
+        private bool m_allianceBuilding;
 
         private LogicResourceData m_buildResourceData;
         private LogicEffectData m_pickUpEffect;
@@ -55,6 +56,8 @@ namespace Supercell.Magic.Logic.Data
             this.m_hasInfoScreen = this.GetBooleanValue("HasInfoScreen", 0);
             this.m_unitHousing = this.GetIntegerValue("UnitHousing", 0);
             this.m_housesUnits = this.GetBooleanValue("HousesUnits", 0);
+            this.m_allianceBuilding = this.GetBooleanValue("AllianceBuilding", 0);
+
 
             this.m_shipyard = string.Equals("Shipyard", this.GetName());
 
@@ -203,6 +206,11 @@ namespace Supercell.Magic.Logic.Data
         public bool IsHousesUnits()
         {
             return this.m_housesUnits;
+        }
+
+        public bool IsAllianceBuilding()
+        {
+            return this.m_allianceBuilding;
         }
     }
 }
