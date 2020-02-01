@@ -27,9 +27,14 @@
         private int m_comeBackNotificationDelayHoursSmall;
         private int m_comeBackNotificationDelayHoursMedium;
         private int m_comeBackNotificationDelayHoursLarge;
+        private int m_ashCnt;
+        private int m_ashCntlow;
+        private int m_ashCntCombat;
 
         private bool m_gamecenterReauthorize;
         private bool m_billingPackNamesFromCsv;
+        private bool m_droidSansFallbackOnLowMemDevices;
+        private bool m_googleServiceAchievementsButton;
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
 
@@ -61,12 +66,17 @@
             this.m_feedbackCategoryBanned = this.GetStrValue("FEEDBACK_CATEGORY_BANNED");
 
             this.m_appRateXpLevel = this.GetIntValue("APP_RATE_XP_LEVEL");
-            this.m_comeBackNotificationDelayHoursSmall = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
-            this.m_comeBackNotificationDelayHoursMedium = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_MEDIUM");
-            this.m_comeBackNotificationDelayHoursLarge = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_LARGE");
+            this.m_comeBackNotificationDelayHoursSmall = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
+            this.m_comeBackNotificationDelayHoursMedium = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_MEDIUM");
+            this.m_comeBackNotificationDelayHoursLarge = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_LARGE");
+            this.m_ashCnt = this.GetIntValue("ASH_CNT");
+            this.m_ashCntLow = this.GetIntValue("ASH_CNT_LOW");
+            this.m_ashCntCombat = this.GetIntValue("ASH_CNT_COMBAT");
 
             this.m_gamecenterReauthorize = this.GetBoolValue("GAMECENTER_REAUTHORIZE");
             this.m_billingPackNamesFromCsv = this.GetBoolValue("BILLING_PACK_NAMES_FROM_CSV");
+            this.m_droidSansFallbackOnLowMemDevices = this.GetBoolValue("DROID_SANS_FALLBACK_ON_LOW_MEM_DEVICES");
+            this.m_googleServiceAchievementsButton = this.GetBoolValue("GOOGLE_SERVICE_ACHIEVEMENTS_BUTTON");
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
         }
@@ -201,6 +211,21 @@
              return this.m_comeBackNotificationDelayHoursLarge;
         }
 
+        public int AshCnt()
+        {
+             return this.m_ashCnt;
+        }
+
+        public int AshCntlow()
+        {
+             return this.m_ashCntlow;
+        }
+
+        public int AshCntCombat()
+        {
+             return this.m_ashCntCombat;
+        }
+
         public bool GamecenterReauthorize()
         {
              return this.m_gamecenterReauthorize;
@@ -209,6 +234,16 @@
         public bool BillingPackNamesFromCsv()
         {
              return this.m_billingPackNamesFromCsv;
+        }
+
+        public bool DroidSansFallbackOnLowMemDevices()
+        {
+            return this.m_droidSansFallbackOnLowMemDevices;
+        }
+
+        public bool GoogleServiceAchievementsButton()
+        {
+            return this.m_googleServiceAchievementsButton;
         }
 
         public bool PepperEnabled()
