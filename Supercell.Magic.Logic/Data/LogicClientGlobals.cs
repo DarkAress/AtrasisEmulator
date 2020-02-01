@@ -17,6 +17,10 @@
         private string m_tosUrlJp;
         private string m_privacyPolicyUrlKr;
         private string m_tosUrlKr;
+        private string m_helpcenterContact;
+        private string m_faqUrl;
+        private string m_forumsUrl;
+        private string m_privacyPolicyUrl;
 
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
@@ -42,6 +46,10 @@
             this.m_tosUrlJp = this.GetStrValue("TOS_URL_JP");
             this.m_privacyPolicyUrlKr = this.GetStrValue("PRIVACY_POLICY_URL_KR");
             this.m_tosUrlKr = this.GetStrValue("TOS_URL_KR");
+            this.m_helpcenterContact = this.GetStrValue("HELPCENTER_CONTACT");
+            this.m_faqUrl = this.GetStrValue("FAQ_URL");
+            this.m_forumsUrl = this.GetStrValue("FORUMS_URL");
+            this.m_privacyPolicyUrl = this.GetStrValue("PRIVACY_POLICY_URL");
 
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
@@ -130,6 +138,26 @@
         public string TosUrlKr()
         {
             return this.m_tosUrlKr;
+        }
+
+        public string HelpcenterContact()
+        {
+            return this.m_helpcenterContact;
+        }
+
+        public string FaqUrl()
+        {
+            return this.m_faqUrl;
+        }
+
+        public string ForumsUrl()
+        {
+            return this.m_forumsUrl;
+        }
+
+        public string PrivacyPolicyUrl()
+        {
+            return this.m_privacyPolicyUrl;
         }
 
         public bool PepperEnabled()
