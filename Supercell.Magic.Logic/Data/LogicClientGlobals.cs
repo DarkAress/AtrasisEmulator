@@ -11,6 +11,12 @@
         private string m_gameAppbankUrl;
         private string m_gameExternalUrl;
         private string m_gameTwitterUrl;
+        private string m_gameTwitterUrlJp;
+        private string m_tosUrl;
+        private string m_privacyLolicyUrlJp;
+        private string m_tosUrlJp;
+        private string m_privacyPolicyUrlKr;
+        private string m_tosUrlKr;
 
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
@@ -30,6 +36,8 @@
             this.m_gameAppbankUrl = this.GetStrValue("GAME_APPBANK_URL");
             this.m_gameExternalUrl = this.GetStrValue("GAME_EXTERNAL_URL");
             this.m_gameTwitterUrl = this.GetStrValue("GAME_TWITTER_URL");
+            this.m_gameTwitterUrlJp = this.GetStrValue("GAME_TWITTER_URL_JP");
+            this.m_tosUrl = this.GetStrValue("TOS_URL");
 
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
@@ -88,6 +96,11 @@
         public string GameTwitterUrl()
         {
             return this.m_gameTwitterUrl;
+        }
+
+        public string GameTwitterUrlJp()
+        {
+            return this.m_gameTwitterUrlJp;
         }
 
         public bool PepperEnabled()
