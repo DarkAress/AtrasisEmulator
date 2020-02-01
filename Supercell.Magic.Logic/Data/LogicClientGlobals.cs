@@ -38,6 +38,10 @@
             this.m_gameTwitterUrl = this.GetStrValue("GAME_TWITTER_URL");
             this.m_gameTwitterUrlJp = this.GetStrValue("GAME_TWITTER_URL_JP");
             this.m_tosUrl = this.GetStrValue("TOS_URL");
+            this.m_privacyLolicyUrlJp = this.GetStrValue("PRIVACY_POLICY_URL_JP");
+            this.m_tosUrlJp = this.GetStrValue("TOS_URL_JP");
+            this.m_privacyPolicyUrlKr = this.GetStrValue("PRIVACY_POLICY_URL_KR");
+            this.m_tosUrlKr = this.GetStrValue("TOS_URL_KR");
 
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
@@ -101,6 +105,31 @@
         public string GameTwitterUrlJp()
         {
             return this.m_gameTwitterUrlJp;
+        }
+
+        public string TosUrl()
+        {
+            return this.m_tosUrl;
+        }
+
+        public string PrivacyLolicyUrlJp()
+        {
+            return this.m_privacyLolicyUrlJp;
+        }
+
+        public string TosUrlJp()
+        {
+            return this.m_tosUrlJp;
+        }
+
+        public string PrivacyPolicyUrlKr()
+        {
+            return this.m_privacyPolicyUrlKr;
+        }
+
+        public string TosUrlKr()
+        {
+            return this.m_tosUrlKr;
         }
 
         public bool PepperEnabled()
