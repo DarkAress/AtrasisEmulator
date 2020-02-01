@@ -25,7 +25,11 @@
 
         private int m_appRateXpLevel;
         private int m_comeBackNotificationDelayHoursSmall;
+        private int m_comeBackNotificationDelayHoursMedium;
+        private int m_comeBackNotificationDelayHoursLarge;
 
+        private bool m_gamecenterReauthorize;
+        private bool m_billingPackNamesFromCsv;
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
 
@@ -55,9 +59,14 @@
             this.m_forumsUrl = this.GetStrValue("FORUMS_URL");
             this.m_privacyPolicyUrl = this.GetStrValue("PRIVACY_POLICY_URL");
             this.m_feedbackCategoryBanned = this.GetStrValue("FEEDBACK_CATEGORY_BANNED");
-            this.m_appRateXpLevel = this.GetIntValue("APP_RATE_XP_LEVEL");
-            this.m_comeBackNotificationDelayHoursSmall = * 3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
 
+            this.m_appRateXpLevel = this.GetIntValue("APP_RATE_XP_LEVEL");
+            this.m_comeBackNotificationDelayHoursSmall = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
+            this.m_comeBackNotificationDelayHoursMedium = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_MEDIUM");
+            this.m_comeBackNotificationDelayHoursLarge = *3600 this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_LARGE");
+
+            this.m_gamecenterReauthorize = this.GetBoolValue("GAMECENTER_REAUTHORIZE");
+            this.m_billingPackNamesFromCsv = this.GetBoolValue("BILLING_PACK_NAMES_FROM_CSV");
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
         }
@@ -180,6 +189,26 @@
         public int ComeBackNotificationDelayHoursSmall()
         {
              return this.m_comeBackNotificationDelayHoursSmall;
+        }
+
+        public int ComeBackNotificationDelayHoursMedium()
+        {
+             return this.m_comeBackNotificationDelayHoursMedium;
+        }
+
+        public int ComeBackNotificationDelayHoursLarge()
+        {
+             return this.m_comeBackNotificationDelayHoursLarge;
+        }
+
+        public bool GamecenterReauthorize()
+        {
+             return this.m_gamecenterReauthorize;
+        }
+
+        public bool BillingPackNamesFromCsv()
+        {
+             return this.m_billingPackNamesFromCsv;
         }
 
         public bool PepperEnabled()
